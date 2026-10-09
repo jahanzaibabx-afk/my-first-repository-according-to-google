@@ -1,0 +1,646 @@
+:root {
+	color-scheme: light;
+	--ink: #18312f;
+	--muted: #5c6c67;
+	--paper: #f7f7f1;
+	--white: #fff;
+	--green: #245f4c;
+	--lime: #d9e78c;
+	--coral: #d96d4c;
+	--line: #d9dfd6;
+	font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+	color: var(--ink);
+	background: var(--paper);
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	min-width: 320px;
+	margin: 0;
+}
+
+a {
+	color: inherit;
+}
+
+.site-header,
+.site-footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 2rem;
+	padding: 1.2rem max(5vw, calc((100vw - 1280px) / 2));
+}
+
+.site-header {
+	background: var(--white);
+	border-bottom: 1px solid var(--line);
+}
+
+.brand {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.7rem;
+	color: var(--ink);
+	font-size: 1rem;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+.brand strong {
+	font-weight: 700;
+}
+
+.brand-mark {
+	display: grid;
+	width: 2.25rem;
+	aspect-ratio: 1;
+	place-items: center;
+	border-radius: 50%;
+	background: var(--green);
+	color: var(--white);
+	font-family: Georgia, serif;
+	font-size: 1.25rem;
+}
+
+.primary-nav ul {
+	display: flex;
+	gap: clamp(1rem, 2.5vw, 2.5rem);
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.primary-nav a,
+.section-heading > a {
+	font-size: 0.9rem;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.primary-nav a:hover,
+.section-heading > a:hover,
+.program a:hover,
+.news-item a:hover {
+	color: var(--coral);
+}
+
+.site-search form {
+	display: flex;
+	gap: 0.4rem;
+}
+
+.site-search input,
+.site-search button {
+	min-height: 2.5rem;
+	border: 1px solid var(--line);
+	border-radius: 3px;
+	font: inherit;
+}
+
+.site-search input {
+	width: 9rem;
+	padding: 0 0.7rem;
+}
+
+.site-search button {
+	padding: 0 0.8rem;
+	background: var(--green);
+	color: var(--white);
+	cursor: pointer;
+}
+
+.hero {
+	display: grid;
+	min-height: 34rem;
+	grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+	align-items: center;
+	gap: 3vw;
+	padding: 4rem max(5vw, calc((100vw - 1280px) / 2));
+	background: #e8eee1;
+}
+
+.hero-copy {
+	max-width: 38rem;
+	padding: 1rem 0;
+	animation: rise-in 850ms cubic-bezier(0.2, 0.75, 0.25, 1) both;
+}
+
+.eyebrow {
+	margin: 0 0 0.9rem;
+	color: var(--green);
+	font-size: 0.73rem;
+	font-weight: 800;
+	text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+	margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+	font-family: Georgia, "Times New Roman", serif;
+	font-weight: 500;
+}
+
+h1 {
+	margin-bottom: 1rem;
+	font-size: clamp(2.7rem, 5vw, 5rem);
+	line-height: 1.03;
+}
+
+.hero hgroup p {
+	margin-bottom: 1.4rem;
+	color: var(--green);
+	font-size: 1.2rem;
+}
+
+.hero-copy > p:not(.eyebrow) {
+	max-width: 33rem;
+	color: var(--muted);
+	line-height: 1.7;
+}
+
+.button-link {
+	display: inline-block;
+	margin-top: 0.5rem;
+	padding: 0.9rem 1.2rem;
+	border-radius: 3px;
+	background: var(--coral);
+	color: var(--white);
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.button-link:hover {
+	background: #b95034;
+}
+
+.btn-academy {
+	--bs-btn-color: var(--white);
+	--bs-btn-bg: var(--coral);
+	--bs-btn-border-color: var(--coral);
+	--bs-btn-hover-color: var(--white);
+	--bs-btn-hover-bg: #b95034;
+	--bs-btn-hover-border-color: #b95034;
+	--bs-btn-active-color: var(--white);
+	--bs-btn-active-bg: #a7462d;
+	--bs-btn-active-border-color: #a7462d;
+}
+
+.hero-image {
+	position: relative;
+	min-width: 0;
+	margin: 0;
+	animation: image-in 1100ms cubic-bezier(0.2, 0.75, 0.25, 1) 120ms both;
+}
+
+.hero-image img {
+	display: block;
+	width: 100%;
+	aspect-ratio: 1.35;
+	object-fit: cover;
+}
+
+.hero-image figcaption {
+	padding-top: 0.6rem;
+	color: var(--muted);
+	font-size: 0.78rem;
+}
+
+.section-wrap {
+	padding: 5rem max(5vw, calc((100vw - 1120px) / 2));
+}
+
+.intro {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: end;
+	gap: 4rem;
+	border-bottom: 1px solid var(--line);
+}
+
+h2 {
+	margin-bottom: 0;
+	font-size: clamp(2rem, 3.5vw, 3.2rem);
+	line-height: 1.12;
+}
+
+.intro > p,
+.campus-copy > p:not(.eyebrow),
+.admissions > div > p:not(.eyebrow) {
+	max-width: 38rem;
+	margin-bottom: 0;
+	color: var(--muted);
+	line-height: 1.75;
+}
+
+.programs {
+	background: var(--white);
+}
+
+.section-heading {
+	display: flex;
+	align-items: end;
+	justify-content: space-between;
+	gap: 2rem;
+	margin-bottom: 2.2rem;
+}
+
+.section-heading > a {
+	padding-bottom: 0.3rem;
+}
+
+.program-grid {
+	--bs-gutter-x: 2rem;
+	--bs-gutter-y: 1.5rem;
+}
+
+.program {
+	display: flex;
+	min-height: 15rem;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 1.5rem 0.6rem 0.6rem 0;
+	border-top: 3px solid var(--lime);
+}
+
+.program-number,
+.news-date,
+.news-tag {
+	color: var(--muted);
+	font-size: 0.73rem;
+	font-weight: 800;
+}
+
+.program h3,
+.news-item h3 {
+	margin-bottom: 0.7rem;
+	font-size: 1.55rem;
+}
+
+.program > p:not(.program-number),
+.news-item p:not(.news-date, .news-tag) {
+	color: var(--muted);
+	line-height: 1.65;
+}
+
+.program a {
+	margin-top: auto;
+	color: var(--green);
+	font-size: 0.88rem;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.program {
+	transition: border-color 220ms ease, transform 220ms ease;
+}
+
+.program:hover {
+	border-color: var(--coral);
+	transform: translateY(-4px);
+}
+
+.campus {
+	display: grid;
+	grid-template-columns: minmax(0, 1.4fr) minmax(15rem, 0.6fr);
+	gap: 5rem;
+	align-items: center;
+}
+
+.campus-copy blockquote {
+	margin: 2rem 0 0;
+	padding-left: 1.2rem;
+	border-left: 3px solid var(--coral);
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: 1.25rem;
+	line-height: 1.55;
+}
+
+.campus-copy blockquote p {
+	margin-bottom: 0.7rem;
+}
+
+.campus-copy cite {
+	color: var(--muted);
+	font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+	font-size: 0.8rem;
+	font-style: normal;
+}
+
+.campus-note {
+	padding: 1.7rem;
+	background: var(--lime);
+}
+
+.campus-note h3 {
+	margin-bottom: 0.8rem;
+	font-size: 1.6rem;
+}
+
+.campus-note p {
+	line-height: 1.65;
+}
+
+.campus-note a {
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.news {
+	background: var(--white);
+}
+
+.news-item {
+	display: grid;
+	grid-template-columns: 10rem 1fr 8rem;
+	gap: 2rem;
+	align-items: start;
+	padding: 1.5rem 0;
+	border-top: 1px solid var(--line);
+}
+
+.news-item h3 a {
+	text-decoration: none;
+}
+
+.news-item mark {
+	padding: 0.35rem 0.55rem;
+	background: #f5dfd4;
+	color: #75412f;
+}
+
+.admissions {
+	display: grid;
+	grid-template-columns: 1.2fr 0.8fr;
+	gap: 2rem 5rem;
+	align-items: start;
+	background: #e8eee1;
+}
+
+.admissions > div > p:not(.eyebrow) {
+	margin-top: 1rem;
+}
+
+.admissions-facts {
+	margin: 0;
+	border-top: 1px solid #c6d1c1;
+}
+
+.admissions-facts div {
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+	padding: 1rem 0;
+	border-bottom: 1px solid #c6d1c1;
+}
+
+.admissions-facts dt {
+	color: var(--muted);
+}
+
+.admissions-facts dd {
+	margin: 0;
+	font-weight: 700;
+	text-align: right;
+}
+
+.admissions-faq {
+	grid-column: 1 / -1;
+	padding-top: 1rem;
+	border-top: 1px solid #c6d1c1;
+}
+
+.admissions-faq summary {
+	width: fit-content;
+	color: var(--green);
+	font-weight: 700;
+	cursor: pointer;
+}
+
+.admissions-faq p {
+	max-width: 45rem;
+	margin: 1rem 0 0;
+	color: var(--muted);
+	line-height: 1.65;
+}
+
+.site-footer {
+	flex-wrap: wrap;
+	background: var(--ink);
+	color: var(--white);
+}
+
+.footer-brand {
+	color: var(--white);
+}
+
+.footer-brand .brand-mark {
+	background: var(--lime);
+	color: var(--ink);
+}
+
+.site-footer address {
+	color: #d6ded8;
+	font-size: 0.88rem;
+	font-style: normal;
+	line-height: 1.7;
+}
+
+.site-footer address a {
+	color: var(--lime);
+}
+
+.copyright {
+	margin: 0;
+	color: #d6ded8;
+	font-size: 0.8rem;
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	clip-path: inset(50%);
+}
+
+.js .reveal {
+	opacity: 0;
+	transform: translateY(26px);
+	transition: opacity 700ms cubic-bezier(0.2, 0.75, 0.25, 1), transform 700ms cubic-bezier(0.2, 0.75, 0.25, 1);
+}
+
+.js .reveal.is-visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.js .program-grid .program.reveal:nth-child(2) {
+	transition-delay: 100ms;
+}
+
+.js .program-grid .program.reveal:nth-child(3) {
+	transition-delay: 200ms;
+}
+
+@keyframes rise-in {
+	from {
+		opacity: 0;
+		transform: translateY(22px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes image-in {
+	from {
+		opacity: 0;
+		transform: translateY(18px) scale(0.985);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0) scale(1);
+	}
+}
+
+@media (max-width: 900px) {
+	.site-header {
+		flex-wrap: wrap;
+	}
+
+	.primary-nav ul {
+		justify-content: space-between;
+		padding: 0.4rem 0;
+	}
+
+	.hero {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.campus {
+		gap: 2rem;
+	}
+}
+
+@media (max-width: 640px) {
+	.site-header,
+	.site-footer {
+		padding-right: 1.2rem;
+		padding-left: 1.2rem;
+	}
+
+	.site-header {
+		gap: 1rem;
+	}
+
+	.site-search {
+		margin-left: auto;
+	}
+
+	.site-search input {
+		width: min(32vw, 9rem);
+	}
+
+	.hero {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+		padding: 3rem 1.2rem;
+	}
+
+	h1 {
+		font-size: 3rem;
+	}
+
+	.section-wrap {
+		padding: 3.5rem 1.2rem;
+	}
+
+	.intro,
+	.campus,
+	.admissions {
+		grid-template-columns: 1fr;
+		gap: 1.5rem;
+	}
+
+	.program {
+		min-height: 0;
+		padding-bottom: 0.5rem;
+	}
+
+	.program a {
+		margin-top: 0.8rem;
+	}
+
+	.section-heading {
+		align-items: flex-start;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.news-item {
+		grid-template-columns: 1fr auto;
+		gap: 0.5rem 1rem;
+	}
+
+	.news-date {
+		grid-column: 1 / -1;
+	}
+
+	.news-tag {
+		grid-column: 2;
+		grid-row: 2;
+	}
+
+	.news-item > div {
+		grid-column: 1 / -1;
+		grid-row: 3;
+	}
+
+	.admissions-faq {
+		grid-column: auto;
+	}
+
+	.site-footer {
+		align-items: flex-start;
+		flex-direction: column;
+		gap: 1.3rem;
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
+}

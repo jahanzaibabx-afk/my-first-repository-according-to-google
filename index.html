@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore programs, campus life, and admissions at Noble Smart Academy.">
+  <script>document.documentElement.classList.add('js');</script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Noble Smart Academy | Learn with purpose</title>
+</head>
+<body>
+  <header class="site-header navbar navbar-expand-lg">
+    <a class="brand navbar-brand" href="#home" aria-label="Noble Smart Academy home">
+      <span class="brand-mark" aria-hidden="true">NS</span>
+      <span>Noble Smart <strong>Academy</strong></span>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#academy-navigation" aria-controls="academy-navigation" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="academy-navigation">
+      <nav class="primary-nav ms-lg-auto" aria-label="Main navigation">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#programs">Programs</a></li>
+          <li class="nav-item"><a class="nav-link" href="#campus">Campus</a></li>
+          <li class="nav-item"><a class="nav-link" href="#news">News</a></li>
+          <li class="nav-item"><a class="nav-link" href="#admissions">Admissions</a></li>
+        </ul>
+      </nav>
+
+      <search class="site-search ms-lg-3" aria-label="Academy search">
+        <form action="#programs" method="get">
+          <label class="visually-hidden" for="site-query">Search the academy</label>
+          <input id="site-query" name="q" type="search" placeholder="Search courses">
+          <button class="btn btn-success" type="submit">Search</button>
+        </form>
+      </search>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Curiosity takes you places</p>
+        <hgroup>
+          <h1 id="hero-title">Find your direction.<br>Make your mark.</h1>
+          <p>A thoughtful education for a changing world.</p>
+        </hgroup>
+        <p>Small classes and hands-on learning help every student turn potential into purpose.</p>
+        <a class="button-link btn btn-academy" href="#programs">Explore our programs</a>
+      </div>
+      <figure class="hero-image">
+        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&amp;fit=crop&amp;w=1400&amp;q=85" alt="Students celebrating together on a university campus">
+        <figcaption>Class of 2025, celebrating a year of discovery.</figcaption>
+      </figure>
+    </section>
+
+    <section class="intro section-wrap reveal" aria-labelledby="intro-title">
+      <div>
+        <p class="eyebrow">A place to begin</p>
+        <h2 id="intro-title">Education that opens doors</h2>
+      </div>
+      <p>Learn from dedicated teachers, build practical skills, and join a community that makes room for different ideas and ambitions.</p>
+    </section>
+
+    <section class="programs section-wrap reveal" id="programs" aria-labelledby="programs-title">
+      <header class="section-heading">
+        <div>
+          <p class="eyebrow">Make it yours</p>
+          <h2 id="programs-title">Explore our programs</h2>
+        </div>
+        <a href="#admissions">How to apply <span aria-hidden="true">&rarr;</span></a>
+      </header>
+      <div class="program-grid row g-4">
+        <article class="program reveal col-md-4">
+          <p class="program-number">01 / SCIENCE</p>
+          <h3>Science &amp; Environment</h3>
+          <p>Investigate the natural world through fieldwork, experiments, and collaborative research.</p>
+          <a href="#admissions">Discover program <span aria-hidden="true">&rarr;</span></a>
+        </article>
+        <article class="program reveal col-md-4">
+          <p class="program-number">02 / ARTS</p>
+          <h3>Arts &amp; Humanities</h3>
+          <p>Develop your voice and perspective across literature, history, music, and visual arts.</p>
+          <a href="#admissions">Discover program <span aria-hidden="true">&rarr;</span></a>
+        </article>
+        <article class="program reveal col-md-4">
+          <p class="program-number">03 / TECHNOLOGY</p>
+          <h3>Computing &amp; Design</h3>
+          <p>Build, test, and refine ideas with the tools and creative thinking of tomorrow.</p>
+          <a href="#admissions">Discover program <span aria-hidden="true">&rarr;</span></a>
+        </article>
+      </div>
+    </section>
+
+    <section class="campus section-wrap reveal" id="campus" aria-labelledby="campus-title">
+      <div class="campus-copy">
+        <p class="eyebrow">Beyond the classroom</p>
+        <h2 id="campus-title">A campus with room to grow</h2>
+        <p>Find your people in the studio, on the field, in the library, or around a table full of new ideas.</p>
+        <blockquote>
+          <p>“I found the confidence to ask better questions, and the support to follow where they led.”</p>
+          <footer><cite>Jordan Lee, graduating student</cite></footer>
+        </blockquote>
+      </div>
+      <aside class="campus-note" aria-labelledby="visit-title">
+        <h3 id="visit-title">Come see for yourself</h3>
+        <p>Our next open campus afternoon is <time datetime="2026-11-14T13:00">November 14 at 1:00 p.m.</time></p>
+        <a href="#admissions">Plan a visit <span aria-hidden="true">&rarr;</span></a>
+      </aside>
+    </section>
+
+    <section class="news section-wrap reveal" id="news" aria-labelledby="news-title">
+      <header class="section-heading">
+        <div>
+          <p class="eyebrow">From our community</p>
+          <h2 id="news-title">The latest at Noble Smart</h2>
+        </div>
+      </header>
+      <article class="news-item">
+        <p class="news-date"><time datetime="2026-10-02">October 2, 2026</time></p>
+        <div>
+          <h3><a href="#admissions">Student research team wins regional sustainability challenge</a></h3>
+          <p>The team presented a community-led plan to improve local water quality.</p>
+        </div>
+        <p class="news-tag"><mark>Student life</mark></p>
+      </article>
+    </section>
+
+    <section class="admissions section-wrap reveal" id="admissions" aria-labelledby="admissions-title">
+      <div>
+        <p class="eyebrow">Your next chapter</p>
+        <h2 id="admissions-title">Ready to find your place?</h2>
+        <p>Applications for the 2027 school year are open. Start with a campus visit or talk with our admissions team.</p>
+      </div>
+      <dl class="admissions-facts">
+        <div>
+          <dt>Application deadline</dt>
+          <dd><time datetime="2027-02-01">February 1, 2027</time></dd>
+        </div>
+        <div>
+          <dt>Typical class size</dt>
+          <dd><data value="16">16 students</data></dd>
+        </div>
+      </dl>
+      <details class="admissions-faq">
+        <summary>What should I prepare before applying?</summary>
+        <p>Gather your latest school records and a short note about what you are curious to learn. Our admissions team can help with the rest.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#home">
+      <span class="brand-mark" aria-hidden="true">NS</span>
+      <span>Noble Smart <strong>Academy</strong></span>
+    </a>
+    <address>24 Learning Way, Brookfield<br><a href="mailto:hello@noblesmartacademy.example">hello@noblesmartacademy.example</a></address>
+    <p class="copyright">&copy; <time datetime="2026">2026</time> Noble Smart Academy</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const revealItems = document.querySelectorAll('.reveal');
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+      revealItems.forEach((item) => item.classList.add('is-visible'));
+    } else {
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.14 });
+
+      revealItems.forEach((item) => revealObserver.observe(item));
+    }
+  </script>
+</body>
+</html>
